@@ -463,18 +463,6 @@ export default function (pi: ExtensionAPI) {
 		turnEditedFiles.length = 0;
 		editAdvisoryShown.clear();
 
-		// Confirm extension is active via TUI status bar + message bridge
-		const minKB = Math.round(MIN_SIZE_BYTES / 1024);
-		const statusMsg = `jcodemunch hooks active (7 hooks: read ≥${minKB}KB, bash guard, edit advisory)`;
-
-		if (ctx.hasUI) {
-			ctx.ui.setStatus("jcodemunch-hooks", statusMsg);
-		}
-
-		pi.sendMessage({
-			customType: "jcodemunch-session-start",
-			content: `🔧 ${statusMsg}`,
-			display: true,
-		});
+		// Silent startup — no status bar or message noise
 	});
 }
