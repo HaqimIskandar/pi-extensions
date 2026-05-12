@@ -1,0 +1,9 @@
+{
+  "name": "pi-jcodemunch-hooks",
+  "version": "1.0.0",
+  "description": "Bridges jcodemunch-mcp hooks to Pi's event system — auto-reindex, compaction snapshots, subagent briefings, read guard, turn diagnostics.",
+  "main": "index.ts",
+  "dependencies": {
+    "@earendil-works/pi-coding-agent": "latest"
+  }
+}
